@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Celebrate USA hockey legends aged 80 and over. Honoring players and builders who inspire generations through passion and dedication.">
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="icon" type="image/png" href="images/favicon-16x16.png">
     <title>USA Over 80 Hockey Hall of Fame</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -100,35 +100,45 @@
     </section>
     
     <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Get in touch for nominations, sponsorships, or general inquiries.</p>
-    <!-- Email link for those who prefer to use their own email client -->
-    <p>Email: <a href="mailto:usa80plusHHOF@gmail.com">usa80plusHHOF@gmail.com</a></p>
+  <h2>Contact Us</h2>
+  <p>Get in touch for nominations, sponsorships, or general inquiries.</p>
+  <p>Email: <a href="mailto:usa80plusHHOF@gmail.com">usa80plusHHOF@gmail.com</a></p>
 
-    <!-- Simple email form -->
-   <form action="https://formsubmit.co/info@usa80plusHHOF.com" method="POST">
-    <!-- Hidden fields go here -->
-      <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
-      <input type="hidden" name="_captcha" value="false">
+  <form action="https://formsubmit.co/info@usa80plusHHOF.com" method="POST" class="contact-form">
+    <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+    <input type="hidden" name="_captcha" value="false">
 
-      <!-- Visible form fields below -->
-      <label for="name">Name:</label><br>
-      <input type="text" id="name" name="name" required><br>
-      <label for="email">Your Email:</label><br>
-      <input type="email" id="email" name="email" required><br>
-      <label for="message">Message:</label><br>
-      <textarea id="message" name="message" rows="5" required></textarea><br>
-      <button type="submit">Send</button>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Your Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+
+    <button type="submit" class="btn">Send</button>
   </form>
 </section>
 
+
     <section class="sponsors">
-        <h2>Our Sponsors</h2>
-        <p>We are grateful for the support of our sponsors who make this Hall of Fame possible.</p>
-        <ul>
-            <li><a href="https://www.longhockey.com" target="_blank" rel="noopener noreferrer">Long Hockey</a></li>
-            <!-- Add more sponsors as needed -->
-        </ul>
+  <h2>Our Sponsors</h2>
+  <p>We are grateful for the support of our sponsors who make this Hall of Fame possible.</p>
+  <ul>
+    <li>
+      <img src="images/long-hockey-logo-removebg.png" alt="Long Hockey Logo" class="sponsor-logo">
+      Long Hockey
+    </li>
+    <li>
+      <a href="https://therealironmenofhockey.com/" target="_blank" rel="noopener noreferrer">
+        <img src="images/ironman-logo.jpg" alt="The Real Iron Men of Hockey Logo" class="sponsor-logo">
+        The Real Iron Men of Hockey
+      </a>
+    </li>
+  </ul>
+</section>
+
 
     <footer>
         <p>&copy; 2025 USA 80+ Hockey Hall of Fame. All rights reserved.</p>
