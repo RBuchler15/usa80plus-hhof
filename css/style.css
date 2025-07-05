@@ -219,6 +219,15 @@ footer a:hover {
   background-color: #125fa4;
 }
 
+.accordion[aria-expanded="true"] {
+  background: #ffd700;
+  color: #004080;
+}
+
+.panel {
+  display: none;
+}
+
 /* Accessibility: Focus styles for keyboard navigation */
 a:focus,
 button:focus,
@@ -229,6 +238,28 @@ button:focus-visible,
 .btn:focus-visible,
 .accordion:focus-visible {
   outline: 2px solid var(--highlight);
+  outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 10000;
+  background: #ffd700;
+  color: #222;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+.skip-link:focus {
+  left: 10px;
+  top: 10px;
+  width: auto;
+  height: auto;
+  outline: 2px solid #004080;
   outline-offset: 2px;
 }
 
@@ -298,3 +329,4 @@ button:focus-visible,
   animation-play-state: paused;
   cursor: pointer;
 }
+
