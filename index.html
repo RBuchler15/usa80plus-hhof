@@ -14,12 +14,12 @@
            <img src="images/logo_transparent.png" alt="USA 80+ Hockey Hall of Fame Logo" class="logo">
           </div>
           <h1>USA 80+ Hockey Hall of Fame</h1>
-        <nav>
+        <nav role="navigation">
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#inductees">Inductees</a></li>
+                <li><a href="home">Home</a></li>
+                <li><a href="inductees">Inductees</a></li>
                 <li><a href="events.html">Events</a></li>
-                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="gallery">Gallery</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -31,7 +31,6 @@
     <span>Fred Merchant • Ken McKinnon • Mark Sertich • [Add more names here]</span>
   </div>
 </div>
-
       
     
     <section id="home">
@@ -94,13 +93,31 @@
     <section id="gallery">
         <h2>Photo Gallery</h2>
         <p>Relive the greatest moments of 80+ Hockey.</p>
+        <p>Coming soon!</p>
     </section>
     
     <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Get in touch for nominations, sponsorships, or general inquiries.</p>
-        <p>Email: <a href="mailto:usa80plusHHOF@gmail.com">usa80plusHHOF@gmail.com</a></p>
-    </section>
+    <h2>Contact Us</h2>
+    <p>Get in touch for nominations, sponsorships, or general inquiries.</p>
+    <!-- Email link for those who prefer to use their own email client -->
+    <p>Email: <a href="mailto:usa80plusHHOF@gmail.com">usa80plusHHOF@gmail.com</a></p>
+
+    <!-- Simple email form -->
+   <form action="https://formsubmit.co/info@usa80plusHHOF.com" method="POST">
+    <!-- Hidden fields go here -->
+      <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+      <input type="hidden" name="_captcha" value="false">
+
+      <!-- Visible form fields below -->
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" required><br>
+      <label for="email">Your Email:</label><br>
+      <input type="email" id="email" name="email" required><br>
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="5" required></textarea><br>
+      <button type="submit">Send</button>
+  </form>
+</section>
     
     <footer>
         <p>&copy; 2025 USA 80+ Hockey Hall of Fame. All rights reserved.</p>
