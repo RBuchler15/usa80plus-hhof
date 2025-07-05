@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <a href="#home" class="skip-link">Skip to main content</a>
   <header>
     <div class="logo-container">
            <img src="images/logo_transparent.png" alt="USA 80+ Hockey Hall of Fame Logo" class="logo">
@@ -29,8 +30,8 @@
       <h2>2025 Inductees</h2>
 
       <div class="inductee-entry">
-        <button class="accordion">Fred Merchant</button>
-        <div class="panel">
+        <button class="accordion" aria-expanded="false" aria-controls="panel-merchant" id="accordian-merchant">Fred Merchant</button>
+        <div class="panel" id="panel-merchant" role="region" aria-labelledby="accordian-merchant">
           <p><strong>2025 USA 80+ HOCKEY HALL OF FAME INDUCTEE</strong></p>
           <p><strong>FRED MERCHANT (1937– )</strong><br>
           Cape Breton, Nova Scotia → Boulder, Colorado</p>
@@ -50,8 +51,8 @@
       </div>
 
       <div class="inductee-entry">
-        <button class="accordion">Ken McKinnon</button>
-        <div class="panel">
+        <button class="accordion" aria-expanded="false" aria-controls="panel-mckinnon" id="accordian-mckinnon">Ken McKinnon</button>
+        <div class="panel" id="panel-mckinnon" role="region" aria-labelledby="accordian-mckinnon">
           <p><strong>2025 USA 80+ HOCKEY HALL OF FAME INDUCTEE</strong></p>
           <p><strong>KEN McKINNON (b. 1939)</strong><br>
           Toronto, Ontario → Alton Bay, New Hampshire</p>
@@ -69,9 +70,8 @@
         </div>
       </div>
 
-      <div class="inductee-entry">
-        <button class="accordion">Mark Sertich</button>
-        <div class="panel">
+      <button class="accordion" aria-expanded="false" aria-controls="panel-sertich" id="accordion-sertich">Mark Sertich</button>
+      <div class="panel" id="panel-sertich" role="region" aria-labelledby="accordion-sertich"> 
           <p><strong>2025 USA 80+ HOCKEY HALL OF FAME INDUCTEE</strong></p>
           <p><strong>MARK SERTICH (1921–2020)</strong><br>
           Ashland, Wisconsin → Duluth, Minnesota</p>
@@ -103,7 +103,9 @@
       btn.addEventListener('click', () => {
         btn.classList.toggle('active');
         const panel = btn.nextElementSibling;
-        panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !isOpen);
+        panel.style.display = isOpen ? 'none' : 'block';
       });
     });
   </script>
