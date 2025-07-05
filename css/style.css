@@ -118,6 +118,104 @@ section {
   box-shadow: var(--shadow);
 }
 
+.sponsor-logo {
+  height: 80px;          /* Adjust size */
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.sponsor-logo:hover {
+  filter: brightness(1.2);
+}
+
+.sponsors ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 40px;             /* Space between sponsors */
+  justify-content: center;
+  align-items: center;
+}
+
+.sponsors ul li {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Contact Form Styles */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #f4f6fb;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.contact-form label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #177ce2;
+  font-size: 1rem;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  font-family: inherit;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #125fa4;
+  background-color: #e9f0ff;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-form button.btn {
+  margin-top: 20px;
+  padding: 14px 28px;
+  background-color: #177ce2;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: inherit;
+}
+
+.contact-form button.btn:hover {
+  background-color: #125fa4;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 80%;               /* or 70%, adjust as you like */
+  margin: 0 auto;           /* centers the input */
+  display: block;           /* ensures margin auto works */
+}
+
+
+
 footer {
   background: var(--primary-blue);
   color: #fff;
