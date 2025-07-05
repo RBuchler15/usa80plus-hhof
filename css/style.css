@@ -119,10 +119,13 @@ section {
 }
 
 .sponsor-logo {
-  height: 80px;          /* Adjust size */
-  vertical-align: middle;
+  max-width: 100%;
+  height: 80px;              /* Keeps your original size */
+  object-fit: contain;
+  margin-bottom: 8px;
   margin-right: 10px;
 }
+
 .sponsor-logo:hover {
   filter: brightness(1.2);
 }
@@ -131,17 +134,41 @@ section {
   list-style: none;
   padding: 0;
   display: flex;
-  gap: 40px;             /* Space between sponsors */
+  flex-wrap: wrap;
+  gap: 30px;
   justify-content: center;
   align-items: center;
 }
 
 .sponsors ul li {
   display: flex;
+  flex-direction: column;     /* Stack logo and text */
   align-items: center;
+  text-align: center;
   font-weight: bold;
   font-size: 1.1rem;
+  max-width: 200px;
 }
+
+.sponsors ul li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: inherit;
+  text-decoration: none;
+}
+
+.sponsor-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: inherit;
+  text-decoration: none;
+}
+
+
 
 /* Contact Form Styles */
 .contact-form {
@@ -273,6 +300,19 @@ footer a:hover {
   }
 }
 
+@media (max-width: 600px) {
+  .sponsors ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .sponsors ul li {
+    max-width: 90%;
+  }
+}
+
+
+
 .inductee-list {
   max-width: 62.5rem;
   margin: 0 auto;
@@ -318,7 +358,7 @@ footer a:hover {
 }
 
 .accordion[aria-expanded="true"] {
-  background: #ffd700;
+  background: #f8eb39;
   color: #004080;
 }
 
