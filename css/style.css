@@ -7,7 +7,10 @@ body {
 }
 
 header {
-    background: #177ce2;
+    position:sticky;
+    top: 0;
+    z-index: 1000;    
+    background: #004080;
     color: white;
     padding: 20px;
     display: flex;
@@ -17,7 +20,7 @@ header {
 }
 
 .logo-container {
-    background-color: #177ce2; /* Match header color */
+    background-color: #004080; /* Match header color */
     display: inline-block;
     padding: 5px; /* Optional: tweak as needed */
   }
@@ -170,12 +173,6 @@ footer {
   border-radius: 0 0 6px 6px;
 }
 
-.inductee-list {
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: left;
-  padding: 20px;
-}
 
 .homepage-buttons {
   margin-top: 30px;
@@ -185,7 +182,7 @@ footer {
   display: inline-block;
   margin: 10px;
   padding: 12px 24px;
-  background-color: #177ce2;
+  background-color: #004080;
   color: white;
   text-decoration: none;
   font-weight: bold;
@@ -202,7 +199,7 @@ footer {
   display: inline-block;
   margin: 10px;
   padding: 12px 24px;
-  background-color: #177ce2;
+  background-color: #004080;
   color: white;
   text-decoration: none;
   font-weight: bold;
@@ -213,6 +210,12 @@ footer {
 
 .btn:hover {
   background-color: #125fa4;
+}
+
+/* Accessibility: Focus styles for keyboard navigation */
+a:focus-visible, button:focus-visible, .btn:focus-visible, .accordion:focus-visible {
+  outline: 2px solid #ffd700;
+  outline-offset: 2px;
 }
 
 .sports-stable-logo:hover {
@@ -265,5 +268,30 @@ footer a:hover {
 }
 
 
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
 
+  .logo-container {
+    margin-bottom: 10px; /* Space between logo and text */
+  }
 
+  #home h2 {
+    font-size: 2rem; /* Smaller heading on mobile */
+  }
+
+  #home p {
+    font-size: 1rem; /* Smaller paragraph text on mobile */
+  }
+}
+
+@media (max-width: 600px) {
+  header, nav, main {
+    padding: 10px;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+}
